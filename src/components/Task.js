@@ -1,6 +1,19 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class Task extends React.Component {
+  static propTypes = {
+    index: PropTypes.string.isRequired,
+    editTask: PropTypes.func.isRequired,
+    deleteTask: PropTypes.func.isRequired,
+    tasks: PropTypes.shape({
+      task: PropTypes.string.isRequired,
+      date: PropTypes.string.isRequired,
+      priority: PropTypes.number.isRequired,
+      status: PropTypes.string.isRequired
+    })
+  };
+
   passTask = event => {
     event.preventDefault();
     const keyForTaskEdit = this.props.index;
