@@ -1,10 +1,15 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class AddTask extends React.Component {
   taskRef = React.createRef();
   priorityRef = React.createRef();
   dateRef = React.createRef();
   statusRef = React.createRef();
+
+  static propTypes = {
+    addTask: PropTypes.func.isRequired
+  };
 
   createTask = event => {
     event.preventDefault();
