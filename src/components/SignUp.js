@@ -1,10 +1,15 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Header from "./Header";
 
 class SignUp extends React.Component {
   state = {
     password: "",
     confirmPassword: ""
+  };
+
+  static propTypes = {
+    history: PropTypes.object.isRequired
   };
 
   myUser = React.createRef();
