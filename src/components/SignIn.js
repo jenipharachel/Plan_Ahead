@@ -1,8 +1,14 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Header from "./Header";
 
 class SignIn extends React.Component {
   myUser = React.createRef();
+
+  static propTypes = {
+    history: PropTypes.object.isRequired
+  };
+
   //custom methods
   openMyAccount = event => {
     //1.Stop page from refreshing on onSubmit
