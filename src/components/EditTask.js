@@ -31,44 +31,52 @@ class EditTask extends React.Component {
   render() {
     return (
       <form className="addtask" onSubmit={this.completeUpdateTask}>
-        <label className="label">
-          Task:
-          <textarea
-            name="task"
-            value={this.props.tasks.task}
-            onChange={this.handleChange}
-          />
-        </label>
-        <label className="label">
-          Priority:
-          <input
-            name="priority"
-            type="text"
-            value={this.props.tasks.priority}
-            onChange={this.handleChange}
-          />
-        </label>
-        <label className="label">
-          Due Date:
-          <input
-            name="date"
-            type="date"
-            value={this.props.tasks.date}
-            onChange={this.handleChange}
-          />
-        </label>
-        <label className="label">
-          Status:
-          <select
-            name="status"
-            value={this.props.tasks.status}
-            onChange={this.handleChange}
-          >
-            <option value="incomplete">To Do</option>
-            <option value="completed">Done</option>
-          </select>
-        </label>
-        <button type="submit">Update task</button>
+        <li>
+          <label className="label">
+            Task:
+            <textarea
+              name="task"
+              value={this.props.tasks.task}
+              onChange={this.handleChange}
+            />
+          </label>
+          <label className="label">
+            Priority:
+            <input
+              name="priority"
+              type="number"
+              min="1"
+              max="5"
+              value={this.props.tasks.priority}
+              onChange={this.handleChange}
+            />
+          </label>
+        </li>
+        <li>
+          <label className="label">
+            Due Date:
+            <input
+              name="date"
+              type="date"
+              value={this.props.tasks.date}
+              onChange={this.handleChange}
+            />
+          </label>
+          <label className="label">
+            Status:
+            <select
+              name="status"
+              value={this.props.tasks.status}
+              onChange={this.handleChange}
+            >
+              <option value="incomplete">To Do</option>
+              <option value="completed">Done</option>
+            </select>
+          </label>
+        </li>
+        <li>
+          <button type="submit">Update task</button>
+        </li>
       </form>
     );
   }

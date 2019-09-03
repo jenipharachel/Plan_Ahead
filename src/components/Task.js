@@ -26,7 +26,7 @@ class Task extends React.Component {
   };
   render() {
     return (
-      <li className="addtask">
+      <li className="task">
         <div>
           <p> {this.props.tasks.task} </p>
           <p>Due Date: {this.props.tasks.date}</p>

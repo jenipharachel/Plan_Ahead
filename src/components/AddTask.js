@@ -26,30 +26,42 @@ class AddTask extends React.Component {
   render() {
     return (
       <form className="addtask" onSubmit={this.createTask}>
-        <label className="label">
-          Task:
-          <textarea
-            name="task"
-            ref={this.taskRef}
-            placeholder="State your task"
-          />
-        </label>
-        <label className="label">
-          Priority:
-          <input name="priority" type="text" ref={this.priorityRef} />
-        </label>
-        <label className="label">
-          Due Date:
-          <input name="date" type="date" ref={this.dateRef} />
-        </label>
-        <label className="label">
-          Status:
-          <select name="status" ref={this.statusRef}>
-            <option value="incomplete">To Do</option>
-            <option value="completed">Done</option>
-          </select>
-        </label>
-        <button type="submit">+ Add a task</button>
+        <li>
+          <label className="label">
+            Task:
+            <textarea
+              name="task"
+              ref={this.taskRef}
+              placeholder="State your task"
+            />
+          </label>
+          <label className="label">
+            Priority:
+            <input
+              name="priority"
+              type="number"
+              min="1"
+              max="5"
+              ref={this.priorityRef}
+            />
+          </label>
+        </li>
+        <li>
+          <label className="label">
+            Due Date:
+            <input name="date" type="date" ref={this.dateRef} />
+          </label>
+          <label className="label">
+            Status:
+            <select name="status" ref={this.statusRef}>
+              <option value="incomplete">To Do</option>
+              <option value="completed">Done</option>
+            </select>
+          </label>
+        </li>
+        <li>
+          <button type="submit">+ Add a task</button>
+        </li>
       </form>
     );
   }
