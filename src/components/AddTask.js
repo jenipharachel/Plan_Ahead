@@ -60,7 +60,7 @@ class AddTask extends React.Component {
           </label>
         </li>
         <li>
-          <button type="submit">+ Add a task</button>
+          <button type="submit"><i class="fas fa-plus-square"></i> Add a task</button>
         </li>
       </form>
     );

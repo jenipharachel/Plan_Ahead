@@ -28,16 +28,24 @@ class Task extends React.Component {
     return (
       <li className="task">
         <div>
-          <p> {this.props.tasks.task} </p>
-          <p>Due Date: {this.props.tasks.date}</p>
+          <p>
+            <i class="fas fa-tasks"></i>: {this.props.tasks.task}{" "}
+          </p>
+          <p>
+            <i class="fas fa-hourglass-half"></i>: {this.props.tasks.date}
+          </p>
         </div>
         <div>
           <p>Priority: {this.props.tasks.priority}</p>
           <p>Status: {this.props.tasks.status}</p>
         </div>
         <div>
-          <button onClick={this.passTask}>Edit</button>
-          <button onClick={this.delTask}>Delete</button>
+          <button onClick={this.passTask}>
+            <i class="fas fa-edit"></i> Edit
+          </button>
+          <button onClick={this.delTask}>
+            <i class="fas fa-trash"></i> Delete
+          </button>
         </div>
       </li>
     );
