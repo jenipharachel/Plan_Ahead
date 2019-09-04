@@ -41,7 +41,6 @@ class Task extends React.Component {
           <button onClick={this.passTask}>
             <i class="fas fa-edit"></i> Edit
           </button>
-
           <button onClick={this.delTask}>
             <i class="fas fa-trash"></i> Delete
           </button>
