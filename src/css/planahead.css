@@ -18,7 +18,8 @@
   padding: 5px;
 }
 .apptitle {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Comic Sans MS", "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
   border-style: inset;
   padding: 10px;
   background-color: rgb(62, 18, 133);
@@ -35,16 +36,17 @@ button {
 .addtask {
   border-style: groove;
   margin: 20px;
-  width: 33%;
-  position: fixed;
+  width: 15%;
   padding: 15px;
   line-height: 2em;
 }
 .task {
+  background-color: rgb(22, 15, 51);
+  color: white;
   border-style: groove;
-  margin: 20px;
+  margin: 30px;
   width: 33%;
-  position: relative;
+  float: right;
   padding: 15px;
 }
 .label {
