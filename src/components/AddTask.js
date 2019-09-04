@@ -26,7 +26,7 @@ class AddTask extends React.Component {
   render() {
     return (
       <form className="addtask" onSubmit={this.createTask}>
-        <li>
+        <div>
           <label className="label">
             Task:
             <textarea
@@ -35,6 +35,9 @@ class AddTask extends React.Component {
               placeholder="State your task"
             />
           </label>
+        </div>
+
+        <div>
           <label className="label">
             Priority:
             <input
@@ -45,23 +48,30 @@ class AddTask extends React.Component {
               ref={this.priorityRef}
             />
           </label>
-        </li>
-        <li>
+        </div>
+
+        <div>
           <label className="label">
-            Due Date:
+            <i class="fas fa-calendar-day"></i>:
             <input name="date" type="date" ref={this.dateRef} />
           </label>
+        </div>
+
+        <div>
           <label className="label">
             Status:
             <select name="status" ref={this.statusRef}>
-              <option value="incomplete">To Do</option>
-              <option value="completed">Done</option>
+              <option value="Incomplete">To Do</option>
+              <option value="Completed">Done</option>
             </select>
           </label>
-        </li>
-        <li>
-          <button type="submit"><i class="fas fa-plus-square"></i> Add a task</button>
-        </li>
+        </div>
+
+        <div>
+          <button type="submit">
+            <i class="fas fa-plus-square"></i> Add a task
+          </button>
+        </div>
       </form>
     );
   }

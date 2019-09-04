@@ -36,9 +36,9 @@ class SignUp extends React.Component {
 
   render() {
     return (
-      <form id="sign-in" onSubmit={this.openMyAccount}>
+      <form className="my-form" onSubmit={this.openMyAccount}>
         <Header />
-        <div id="name">
+        <div className="form-group">
           <label name="name">
             Name:
             <input
@@ -51,7 +51,7 @@ class SignUp extends React.Component {
           </label>
         </div>
 
-        <div id="pw">
+        <div className="form-group">
           <label name="password">
             Password:
             <input
@@ -64,7 +64,7 @@ class SignUp extends React.Component {
           </label>
         </div>
 
-        <div id="pw">
+        <div className="form-group">
           <label name="password">
             Confirm Password:
             <input

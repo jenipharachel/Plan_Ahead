@@ -25,11 +25,11 @@ class SignIn extends React.Component {
 
   render() {
     return (
-      <form id="sign-in" onSubmit={this.openMyAccount}>
+      <form className="my-form" onSubmit={this.openMyAccount}>
         <Header />
         <p>Existing User? Sign In!!!</p>
 
-        <div id="name">
+        <div className="form-group">
           <label name="name">
             Name:
             <input
@@ -41,7 +41,7 @@ class SignIn extends React.Component {
           </label>
         </div>
 
-        <div id="pw">
+        <div className="form-group">
           <label name="password">
             Password:
             <input type="password" placeholder="Enter your password" required />
@@ -49,7 +49,7 @@ class SignIn extends React.Component {
         </div>
         <button>Sign In</button>
 
-        <div>
+        <div className="form-group">
           <p>New User? </p>
           <button onClick={this.goToSignUp}>Sign Up</button>{" "}
           {/*onClick is an event handler*/}

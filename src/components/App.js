@@ -43,7 +43,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="app">
         <Header />
         <h3>Hello, User</h3>
         <ul>

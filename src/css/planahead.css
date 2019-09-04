@@ -1,46 +1,68 @@
-#sign-in {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-style: outset;
-  border-width: 5px;
-  padding: 10px 0px 40px 0px;
-  margin: 70px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  background-color: rgb(22, 15, 51);
-  color: white;
-}
-
-#pw {
-  padding: 5px;
-}
-#name {
-  padding: 5px;
+* {
+  margin: 0px;
+  padding: 0px;
 }
 .apptitle {
   font-family: "Comic Sans MS", "Gill Sans", "Gill Sans MT", Calibri,
     "Trebuchet MS", sans-serif;
   border-style: inset;
   padding: 10px;
+  margin: 20px 60px;
   background-color: rgb(62, 18, 133);
   color: white;
 }
+
+.my-form {
+  padding: 20px;
+  text-align: center;
+  border-style: outset;
+  margin: 40px;
+  padding: 20px;
+  border-width: 5px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: rgb(22, 15, 51);
+  color: white;
+}
+
+.my-form p {
+  padding-bottom: 20px;
+}
+
+.form-group {
+  padding-bottom: 20px;
+}
+
+input {
+  margin-left: 5px;
+}
+
 button {
+  margin-bottom: 25px;
   padding: 5px;
   font-family: Arial, sans-serif;
   font-size: 15px;
-  margin-left: 15px;
   background-color: rgb(129, 97, 180);
   color: white;
+  border: none;
+  border-radius: 5%;
 }
+
+button:hover {
+  background-color: rgb(62, 18, 133);
+}
+
 .addtask {
   border-style: groove;
   margin: 20px;
   width: 15%;
-  padding: 15px;
+  padding: 10px;
   line-height: 2em;
+  text-align: center;
 }
+
 .task {
+  display: flex;
+  flex-wrap: wrap;
   background-color: rgb(22, 15, 51);
   color: white;
   border-style: groove;
@@ -49,15 +71,18 @@ button {
   float: right;
   padding: 15px;
 }
-.label {
-  margin-right: 2px;
+.task button {
+  margin: 15px;
+  text-align: center;
 }
-ul {
-  list-style: none;
+.task p {
+  margin-right: 25px;
+  line-height: 35px;
 }
+.app h3 {
+  margin-left: 25px;
+}
+ul,
 li {
-  display: flex;
-  align-content: flex-start;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  list-style: none;
 }
