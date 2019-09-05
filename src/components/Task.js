@@ -27,9 +27,7 @@ class Task extends React.Component {
   render() {
     return (
       <div className="task">
-        <p>
-          <i class="fas fa-tasks"></i>: {this.props.tasks.task}
-        </p>
+        <p>Task: {this.props.tasks.task}</p>
         <p>
           <i class="fas fa-hourglass-half"></i>: {this.props.tasks.date}
         </p>

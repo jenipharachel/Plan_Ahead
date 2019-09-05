@@ -54,7 +54,7 @@ class EditTask extends React.Component {
         </li>
         <li>
           <label className="label">
-            Due Date:
+          <i class="fas fa-calendar-day"></i>:
             <input
               name="date"
               type="date"
