@@ -1,0 +1,87 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  background-color: rgb(22, 15, 51);
+}
+
+/* .background-color-purple {
+  background-color: rgb(22, 15, 51);
+} */
+
+.my-form {
+  text-align: center;
+  padding: 15px 0px;
+  border: 1px solid black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: rgb(32, 18, 92);
+  color: white;
+}
+
+/* .my-form p {
+    padding-bottom: 20px;
+  }
+  
+  .form-group {
+    padding-bottom: 20px;
+  }
+  
+  input {
+    margin-left: 5px;
+  } */
+
+button {
+  /* margin-bottom: 25px; */
+  padding: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  background-color: rgb(129, 97, 180);
+  color: white;
+  border: none;
+  border-radius: 5%;
+}
+
+button:hover {
+  background-color: rgb(62, 18, 133);
+}
+
+.addtask {
+  border-style: groove;
+  margin: 20px;
+  width: 180px;
+  padding: 10px;
+  line-height: 2em;
+  text-align: center;
+}
+.addtask button {
+  margin-top: 20px;
+}
+
+.task {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(22, 15, 51);
+  color: white;
+  border-style: groove;
+  margin: 30px;
+  width: 33%;
+  float: right;
+  padding: 15px;
+  text-align: center;
+}
+.task button {
+  margin: 15px;
+  text-align: center;
+}
+.task p {
+  margin-right: 25px;
+  line-height: 35px;
+}
+.app h3 {
+  margin-left: 25px;
+}
+ul,
+li {
+  list-style: none;
+}
