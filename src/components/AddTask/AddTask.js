@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Container } from "reactstrap";
 
 class AddTask extends React.Component {
   taskRef = React.createRef();
@@ -26,52 +27,54 @@ class AddTask extends React.Component {
   render() {
     return (
       <form className="addtask" onSubmit={this.createTask}>
-        <div>
-          <label className="label">
-            Task:
-            <textarea
-              name="task"
-              ref={this.taskRef}
-              placeholder="State your task"
-            />
-          </label>
-        </div>
+        <Container>
+          <div>
+            <label className="label">
+              Task:
+              <textarea
+                name="task"
+                ref={this.taskRef}
+                placeholder="State your task"
+              />
+            </label>
+          </div>
 
-        <div>
-          <label className="label">
-            Priority:
-            <input
-              name="priority"
-              type="number"
-              min="1"
-              max="5"
-              ref={this.priorityRef}
-            />
-          </label>
-        </div>
+          <div>
+            <label className="label">
+              Priority:
+              <input
+                name="priority"
+                type="number"
+                min="1"
+                max="5"
+                ref={this.priorityRef}
+              />
+            </label>
+          </div>
 
-        <div>
-          <label className="label">
-            <i class="fas fa-calendar-day"></i>:
-            <input name="date" type="date" ref={this.dateRef} />
-          </label>
-        </div>
+          <div>
+            <label className="label">
+              <i class="fas fa-calendar-day"></i>:
+              <input name="date" type="date" ref={this.dateRef} />
+            </label>
+          </div>
 
-        <div>
-          <label className="label">
-            Status:
-            <select name="status" ref={this.statusRef}>
-              <option value="Incomplete">To Do</option>
-              <option value="Completed">Done</option>
-            </select>
-          </label>
-        </div>
+          <div>
+            <label className="label">
+              Status:
+              <select name="status" ref={this.statusRef}>
+                <option value="Incomplete">To Do</option>
+                <option value="Completed">Done</option>
+              </select>
+            </label>
+          </div>
 
-        <div>
-          <button type="submit">
-            <i class="fas fa-plus-square"></i> Add a task
-          </button>
-        </div>
+          <div>
+            <button type="submit">
+              <i class="fas fa-plus-square"></i> Add a task
+            </button>
+          </div>
+        </Container>
       </form>
     );
   }
