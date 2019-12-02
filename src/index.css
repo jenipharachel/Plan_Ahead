@@ -48,16 +48,16 @@ button:hover {
 
 .addtask {
   border: 1px solid black;
-  margin: 20px;
+  /* margin: 20px; */
   width: 22.5%;
   padding: 10px;
   line-height: 2em;
   text-align: center;
   background-color: white;
 }
-.addtask button {
+/* .addtask button {
   margin-top: 20px;
-}
+} */
 
 .task {
   display: flex;
@@ -80,7 +80,7 @@ button:hover {
   line-height: 35px;
 }
 .app h3 {
-  margin-left: 25px;
+  color: white;
 }
 ul,
 li {

@@ -3,6 +3,7 @@ import Header from "../Header/Header";
 import AddTask from "../AddTask/AddTask";
 import EditTask from "../EditTask/EditTask";
 import Task from "../Task/Task";
+import { Container, Row, Col } from "reactstrap";
 
 class App extends React.Component {
   state = {
@@ -43,31 +44,39 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="app">
+      <Container className="app">
         <Header />
-        <h3>Hello, User</h3>
-        <ul>
-          {Object.keys(this.state.tasks).map(key => (
-            <Task
-              tasks={this.state.tasks[key]}
-              key={key}
-              index={key}
-              editTask={this.editTask}
-              deleteTask={this.deleteTask}
-            />
-          ))}
-        </ul>
-        {this.state.isEditFormVisible ? (
-          <EditTask
-            tasks={this.state.tasks[this.state.editTaskKey]}
-            index={this.state.editTaskKey}
-            updateTask={this.updateTask}
-            hideEditTask={this.hideEditTask}
-          />
-        ) : (
-          <AddTask addTask={this.addTask} />
-        )}
-      </div>
+        <Row>
+          <h3>Hello, User</h3>
+        </Row>
+        <Row>
+          <Col sm={{ size: 12 }}>
+            {this.state.isEditFormVisible ? (
+              <EditTask
+                tasks={this.state.tasks[this.state.editTaskKey]}
+                index={this.state.editTaskKey}
+                updateTask={this.updateTask}
+                hideEditTask={this.hideEditTask}
+              />
+            ) : (
+              <AddTask addTask={this.addTask} />
+            )}
+          </Col>
+          <Col sm={{ size: 12 }}>
+            <ul>
+              {Object.keys(this.state.tasks).map(key => (
+                <Task
+                  tasks={this.state.tasks[key]}
+                  key={key}
+                  index={key}
+                  editTask={this.editTask}
+                  deleteTask={this.deleteTask}
+                />
+              ))}
+            </ul>
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }
